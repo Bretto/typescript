@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html data-ng-app="AppModule" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title></title>
+    <link rel='stylesheet' href='./libs/bootstrap/css/bootstrap.css'/>
+    <link rel='stylesheet' href="./css/screen.css"/>
+</head>
+<body data-ng-controller="AppCtrl as appCtrl">
+
+
+<div class="container">
+    <div class="well">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search name" ng-model="search.name">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <span class="range-wrapper">
+                <span>0</span>
+                <input type="range" ng-model="age" min="0" max="10" step="1"/>
+                <span>10</span>
+                    </span>
+            </div>
+            <button data-ng-click="appCtrl.onTest()" type="submit" class="btn btn-info">test</button>
+        </div>
+    </div>
+
+    <ng-include src="'./table/table.html'"></ng-include>
+    <!--<div class="row form-wrap">-->
+    <!--<div class="col-sm-7">-->
+    <!--<div class="panel panel-default">-->
+    <!--<div class="panel-heading">-->
+    <!--<button type="button" class="close" data-ng-click="onModalClose()">&times;</button>-->
+    <!--<h3 class="panel-title">Edit</h3>-->
+    <!--</div>-->
+    <!--<div class="panel-body">-->
+    <!--<form class="form-horizontal" role="form">-->
+    <!--<div class="form-group">-->
+    <!--<label class="col-sm-2 control-label">Name</label>-->
+
+    <!--<div class="col-sm-10">-->
+    <!--<input type="text" ng-model="editRow.name" class="form-control" placeholder="Name">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<label class="col-sm-2 control-label">Age</label>-->
+
+    <!--<div class="col-sm-10">-->
+    <!--<input type="text" ng-model="editRow.age" class="form-control" placeholder="Age">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<label class="col-sm-2 control-label">Email</label>-->
+
+    <!--<div class="col-sm-10">-->
+    <!--<input type="email" ng-model="editRow.email" class="form-control" placeholder="Email">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<label class="col-sm-2 control-label">Avatar</label>-->
+
+    <!--<div class="col-sm-10">-->
+    <!--<input type="text" ng-model="editRow.avatar" class="form-control" placeholder="Avatar">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+    <!--<label class="col-sm-2 control-label">Bio</label>-->
+
+    <!--<div class="col-sm-10">-->
+    <!--<textarea class="form-control" ng-model="editRow.bio" rows="3"></textarea>-->
+    <!--</div>-->
+    <!--</div>-->
+
+
+    <!--<div class="form-group">-->
+    <!--<div class="col-sm-offset-2 col-sm-10">-->
+    <!--<button data-ng-click="onModalSave()" type="submit" class="btn btn-default">Save-->
+    <!--</button>-->
+    <!--<button data-ng-click="onModalClose()" type="submit" class="btn btn-default">Cancel-->
+    <!--</button>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</form>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="grid-wrap" data-ng-class="{gridclose:isGridClose}">-->
+    <!--<ul class="user-grid" scoll-to-active>-->
+    <!--<li data-ng-repeat="row in data | limitTo: 50 | filter:search" class="repeat-animation"-->
+    <!--scroll-if="isActiveRow(row)">-->
+    <!--<div class="wrap" set-pos data-ng-click="onGridSelect(row)"-->
+    <!--data-ng-class="{active: isActiveRow(row)}">-->
+    <!--<h5>{{$index+1}}</h5>-->
+    <!--<h4>{{row.name}}</h4>-->
+    <!--</div>-->
+    <!--<div class="shadow-element">-->
+    <!--<h5>{{$index+1}}</h5>-->
+    <!--<h4>{{row.name}}</h4>-->
+    <!--</div>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+
+
+</div>
+
+<div class="modal fade" data-ng-class="{modalOpen: modalOpened, in: animate}">
+    <div class="modal-backdrop" data-ng-click="onModalClose()" data-ng-class="{in: animate}"></div>
+    <div class="container modal-dialog">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <button type="button" class="close" data-ng-click="onModalClose()">&times;</button>
+                    <h3 class="panel-title">Edit</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Name</label>
+
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="editRow.name" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Age</label>
+
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="editRow.age" class="form-control" placeholder="Age">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Email</label>
+
+                            <div class="col-sm-10">
+                                <input type="email" ng-model="editRow.email" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Avatar</label>
+
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="editRow.avatar" class="form-control" placeholder="Avatar">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Bio</label>
+
+                            <div class="col-sm-10">
+                                <textarea class="form-control" ng-model="editRow.bio" rows="3"></textarea>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button data-ng-click="onModalSave()" type="submit" class="btn btn-default">Save
+                                </button>
+                                <button data-ng-click="onModalClose()" type="submit" class="btn btn-default">Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="./libs/jquery.min.js"></script>
+<script src="./libs/angular.min.js"></script>
+<script src="./libs/angular-animate.min.js"></script>
+
+<script src="./table/TableModule.js"></script>
+<script src="./app/AppFilter.js"></script>
+<script src="./app/AppService.js"></script>
+<script src="./app/AppCtrl.js"></script>
+<script src="./app/AppFactory.js"></script>
+
+<script src="./app/AppModule.js"></script>
+
+
+
+</body>
+</html>
