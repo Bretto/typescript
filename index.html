@@ -2,7 +2,7 @@
 <html data-ng-app="AppModule" xmlns="http://www.w3.org/1999/html">
 <head>
     <title></title>
-    <link rel='stylesheet' href='./libs/bootstrap/css/bootstrap.css'/>
+    <link rel='stylesheet' href='./src/libs/bootstrap/css/bootstrap.css'/>
     <link rel='stylesheet' href="./css/screen.css"/>
 </head>
 <body data-ng-controller="AppCtrl as appCtrl">
@@ -28,7 +28,9 @@
         </div>
     </div>
 
-    <ng-include src="'./table/table.html'"></ng-include>
+    <ng-include src="'./src/table/table.html'"></ng-include>
+
+
     <!--<div class="row form-wrap">-->
     <!--<div class="col-sm-7">-->
     <!--<div class="panel panel-default">-->
@@ -161,7 +163,7 @@
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button data-ng-click="onModalSave()" type="submit" class="btn btn-default">Save
                                 </button>
-                                <button data-ng-click="onModalClose()" type="submit" class="btn btn-default">Cancel
+                                <button data-ng-click="onModalClose()" t    ype="submit" class="btn btn-default">Cancel
                                 </button>
                             </div>
                         </div>
@@ -173,17 +175,12 @@
 </div>
 
 
-<script src="./libs/jquery.min.js"></script>
-<script src="./libs/angular.min.js"></script>
-<script src="./libs/angular-animate.min.js"></script>
+<script src="./src/libs/jquery.min.js"></script>
+<script src="./src/libs/angular.min.js"></script>
+<script src="./src/libs/angular-animate.min.js"></script>
+<!--<script src="./src/table/AppModule.js"></script>-->
+<script src="./build/bundle.js"></script>
 
-<script src="./table/TableModule.js"></script>
-<script src="./app/AppFilter.js"></script>
-<script src="./app/AppService.js"></script>
-<script src="./app/AppCtrl.js"></script>
-<script src="./app/AppFactory.js"></script>
-
-<script src="./app/AppModule.js"></script>
 
 
 

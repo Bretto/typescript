@@ -1,8 +1,14 @@
 {
-    "name": "typescript",
-    "version": "0.0.1",
-    "dependencies": {
-        "express": "3.x",
-        "ejs": "*"
-    }
+  "name": "typescript",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.x",
+    "ejs": "*"
+  },
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "vinyl-source-stream": "~0.1.1",
+    "gulp-notify": "~1.2.4",
+    "gulp-livereload": "~1.2.0"
+  }
 }
