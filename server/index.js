@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -19,17 +18,12 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, '/')));
+app.use(express.static(path.join(__dirname, '../client')));
 
 // development only
 if ('development' === app.get('env')) {
     app.use(express.errorHandler());
 }
-
-app.get('/', function(req,res) {
-    res.sendfile('index.html');
-});
-
 
 http.createServer(app).listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));
