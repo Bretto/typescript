@@ -40,9 +40,21 @@ html {
   }
 
   tr.active {
+
     color: #ffffff;
+
     td {
       background-color: #428bca !important;
+
+    }
+  }
+
+  tr.flash{
+
+    td {
+      -webkit-animation-fill-mode: both;
+      -webkit-animation-duration: .5s;
+      -webkit-animation-name: select-flash;
     }
 
   }
@@ -55,6 +67,23 @@ html {
     overflow: hidden;
   }
 }
+
+
+@-webkit-keyframes select-flash {
+  0%, 50% {
+    color: #ffffff;
+    background-color: #50b2ff;
+  }
+  25%, 75% {
+    color: #ffffff;
+    background-color: #428bca;
+  }
+  100% {
+
+  }
+}
+
+
 
 .form-wrap {
   position: absolute;
@@ -223,6 +252,10 @@ html {
 .slide-back.ng-leave.ng-leave-active {
   -webkit-transform: translate3d(100% + 10%, 0, 0);
 }
+
+
+
+
 
 
 

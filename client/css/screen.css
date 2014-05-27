@@ -27,12 +27,25 @@ html {
   color: #ffffff; }
   .user-table tr.active td {
     background-color: #428bca !important; }
+.user-table tr.flash td {
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-duration: .5s;
+  -webkit-animation-name: select-flash; }
 .user-table td {
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 150px;
   word-wrap: break-word;
   overflow: hidden; }
+
+@-webkit-keyframes select-flash {
+  0%, 50% {
+    color: #ffffff;
+    background-color: #50b2ff; }
+
+  25%, 75% {
+    color: #ffffff;
+    background-color: #428bca; } }
 
 .form-wrap {
   position: absolute;

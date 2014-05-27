@@ -18,7 +18,7 @@
 
 
         <div class="page-wrap">
-            <div ng-view ng-class="transitionClass"></div>
+            <div ng-view ng-class="transitionClass" transition-end></div>
         </div>
 </section>
 
@@ -30,11 +30,13 @@
 <script src="./src/libs/angular-animate.min.js"></script>
 <script src="./src/libs/angular-route.min.js"></script>
 
+<script src="./src/libs/axi/directives/TransitionEnd.js"></script>
 <script src="./src/libs/axi/Iterators.js"></script>
 <script src="./src/libs/axi/AxiModule.js"></script>
 
 <script src="./src/table/TableBase.js"></script>
 <script src="./src/table/TableCtrl.js"></script>
+<script src="./src/table/TableDetailCtrl.js"></script>
 <script src="./src/table/TableEditCtrl.js"></script>
 <script src="./src/table/TableModule.js"></script>
 
@@ -43,7 +45,6 @@
 <script src="./src/app/AppServices.js"></script>
 <script src="./src/app/AppModule.js"></script>
 
-<!--<script src="./src/yes.js"></script>-->
 
 
 </body>

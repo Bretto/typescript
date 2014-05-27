@@ -1,34 +1,34 @@
 <div ng-controller="TableEditCtrl as tableEdit">
+    <h3>Edit</h3>
 
-    <form class="form" role="form">
-        <div class="form-group">
-            <label>Name</label>
-            <input type="text" ng-model="tableEdit.currentItem.name" class="form-control" placeholder="Name">
-        </div>
-        <div class="form-group">
-            <label>Age</label>
-            <input type="text" ng-model="tableEdit.currentItem.age" class="form-control" placeholder="Age">
-        </div>
-        <div class="form-group">
-            <label>Email</label>
-            <input type="email" ng-model="tableEdit.currentItem.email" class="form-control" placeholder="Email">
-        </div>
-        <div class="form-group">
-            <label>Avatar</label>
+    <div class="well">
+        <form class="form" role="form">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" ng-model="tableEdit.editItem.name" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label>Age</label>
+                <input type="text" ng-model="tableEdit.editItem.age" class="form-control" placeholder="Age">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" ng-model="tableEdit.editItem.email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label>Avatar</label>
+                <input type="text" ng-model="tableEdit.editItem.avatar" class="form-control" placeholder="Avatar">
+            </div>
+            <div class="form-group">
+                <label>Bio</label>
+                <textarea class="form-control" ng-model="tableEdit.editItem.bio" rows="3"></textarea>
+            </div>
 
-            <input type="text" ng-model="tableEdit.currentItem.avatar" class="form-control" placeholder="Avatar">
-        </div>
-        <div class="form-group">
-            <label>Bio</label>
-            <textarea class="form-control" ng-model="tableEdit.currentItem.bio" rows="3"></textarea>
-        </div>
-
-        <div class="form-group">
-                <button data-ng-click="tableEdit.onSave()" type="submit" class="btn btn-default">Save
-                </button>
-                <button data-ng-click="tableEdit.onCancel()" type="submit" class="btn btn-default">Cancel
-                </button>
-        </div>
-    </form>
+        </form>
+    </div>
+    <div>
+        <button data-ng-click="tableEdit.onCancel()" type="submit" class="btn btn-default">Cancel</button>
+        <button data-ng-click="tableEdit.onSave()" type="submit" class="btn btn-info">Save</button>
+    </div>
 
 </div>
